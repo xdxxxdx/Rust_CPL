@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="rustdoc">
+    <meta name="description" content="API documentation for the Rust `FloatscreenWM` struct in crate `cplwm_assignment`.">
+    <meta name="keywords" content="rust, rustlang, rust-lang, FloatscreenWM">
+
+    <title>cplwm_assignment::g_multiple_workspaces::FloatscreenWM - Rust</title>
+
+    <link rel="stylesheet" type="text/css" href="../../rustdoc.css">
+    <link rel="stylesheet" type="text/css" href="../../main.css">
+    
+
+    
+    
+</head>
+<body class="rustdoc">
+    <!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+    
+
+    <nav class="sidebar">
+        
+        <p class='location'><a href='../index.html'>cplwm_assignment</a>::<wbr><a href='index.html'>g_multiple_workspaces</a></p><script>window.sidebarCurrent = {name: 'FloatscreenWM', ty: 'struct', relpath: ''};</script><script defer src="sidebar-items.js"></script>
+    </nav>
+
+    <nav class="sub">
+        <form class="search-form js-only">
+            <div class="search-container">
+                <input class="search-input" name="search"
+                       autocomplete="off"
+                       placeholder="Click or press ‘S’ to search, ‘?’ for more options…"
+                       type="search">
+            </div>
+        </form>
+    </nav>
+
+    <section id='main' class="content struct">
+<h1 class='fqn'><span class='in-band'>Struct <a href='../index.html'>cplwm_assignment</a>::<wbr><a href='index.html'>g_multiple_workspaces</a>::<wbr><a class='struct' href=''>FloatscreenWM</a></span><span class='out-of-band'><span id='render-detail'>
+                   <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
+                       [<span class='inner'>&#x2212;</span>]
+                   </a>
+               </span><a id='src-2160' class='srclink' href='../../src/cplwm_assignment/src/g_multiple_workspaces.rs.html#56-82' title='goto source code'>[src]</a></span></h1>
+<pre class='rust struct'>pub struct FloatscreenWM {
+    pub windows: <a class='struct' href='https://doc.rust-lang.org/nightly/collections/vec/struct.Vec.html' title='collections::vec::Vec'>Vec</a>&lt;<a class='type' href='../../cplwm_api/types/type.Window.html' title='cplwm_api::types::Window'>Window</a>&gt;,
+    pub full_screen_windows: <a class='struct' href='https://doc.rust-lang.org/nightly/collections/vec/struct.Vec.html' title='collections::vec::Vec'>Vec</a>&lt;<a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.tuple.html'>(</a><a class='type' href='../../cplwm_api/types/type.Window.html' title='cplwm_api::types::Window'>Window</a>, <a class='struct' href='../../cplwm_api/types/struct.Geometry.html' title='cplwm_api::types::Geometry'>Geometry</a>, <a class='enum' href='../../cplwm_api/types/enum.FloatOrTile.html' title='cplwm_api::types::FloatOrTile'>FloatOrTile</a>, <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='type' href='../../cplwm_api/types/type.Window.html' title='cplwm_api::types::Window'>Window</a>&gt;<a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.tuple.html'>)</a>&gt;,
+    pub focused_window: <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='type' href='../../cplwm_api/types/type.Window.html' title='cplwm_api::types::Window'>Window</a>&gt;,
+    pub float_windows: <a class='struct' href='https://doc.rust-lang.org/nightly/collections/vec/struct.Vec.html' title='collections::vec::Vec'>Vec</a>&lt;<a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.tuple.html'>(</a><a class='type' href='../../cplwm_api/types/type.Window.html' title='cplwm_api::types::Window'>Window</a>, <a class='struct' href='../../cplwm_api/types/struct.Geometry.html' title='cplwm_api::types::Geometry'>Geometry</a><a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.tuple.html'>)</a>&gt;,
+    pub tile_windows: <a class='struct' href='https://doc.rust-lang.org/nightly/collections/vec/struct.Vec.html' title='collections::vec::Vec'>Vec</a>&lt;<a class='type' href='../../cplwm_api/types/type.Window.html' title='cplwm_api::types::Window'>Window</a>&gt;,
+    pub screen: <a class='struct' href='../../cplwm_api/types/struct.Screen.html' title='cplwm_api::types::Screen'>Screen</a>,
+    pub original_windows: <a class='struct' href='https://doc.rust-lang.org/nightly/collections/vec/struct.Vec.html' title='collections::vec::Vec'>Vec</a>&lt;<a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.tuple.html'>(</a><a class='type' href='../../cplwm_api/types/type.Window.html' title='cplwm_api::types::Window'>Window</a>, <a class='struct' href='../../cplwm_api/types/struct.Geometry.html' title='cplwm_api::types::Geometry'>Geometry</a><a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.tuple.html'>)</a>&gt;,
+    pub minimised_windows: <a class='struct' href='https://doc.rust-lang.org/nightly/collections/vec/struct.Vec.html' title='collections::vec::Vec'>Vec</a>&lt;<a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.tuple.html'>(</a><a class='type' href='../../cplwm_api/types/type.Window.html' title='cplwm_api::types::Window'>Window</a>, <a class='struct' href='../../cplwm_api/types/struct.Geometry.html' title='cplwm_api::types::Geometry'>Geometry</a>, <a class='enum' href='../../cplwm_api/types/enum.FloatOrTile.html' title='cplwm_api::types::FloatOrTile'>FloatOrTile</a><a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.tuple.html'>)</a>&gt;,
+    pub gap: <a class='type' href='../../cplwm_api/types/type.GapSize.html' title='cplwm_api::types::GapSize'>GapSize</a>,
+    pub workspace: <a class='type' href='../../cplwm_api/types/type.WorkspaceIndex.html' title='cplwm_api::types::WorkspaceIndex'>WorkspaceIndex</a>,
+}</pre><div class='docblock'><p>Stuct of Tile screen windows manager</p>
+</div><h2 class='fields'>Fields</h2><span id='structfield.windows' class='structfield'><code>windows: <a class='struct' href='https://doc.rust-lang.org/nightly/collections/vec/struct.Vec.html' title='collections::vec::Vec'>Vec</a>&lt;<a class='type' href='../../cplwm_api/types/type.Window.html' title='cplwm_api::types::Window'>Window</a>&gt;</code>
+                           </span><span class='stab '></span><div class='docblock'><p>The vectors of the windows, the first one is on the master tile</p>
+</div><span id='structfield.full_screen_windows' class='structfield'><code>full_screen_windows: <a class='struct' href='https://doc.rust-lang.org/nightly/collections/vec/struct.Vec.html' title='collections::vec::Vec'>Vec</a>&lt;<a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.tuple.html'>(</a><a class='type' href='../../cplwm_api/types/type.Window.html' title='cplwm_api::types::Window'>Window</a>, <a class='struct' href='../../cplwm_api/types/struct.Geometry.html' title='cplwm_api::types::Geometry'>Geometry</a>, <a class='enum' href='../../cplwm_api/types/enum.FloatOrTile.html' title='cplwm_api::types::FloatOrTile'>FloatOrTile</a>, <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='type' href='../../cplwm_api/types/type.Window.html' title='cplwm_api::types::Window'>Window</a>&gt;<a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.tuple.html'>)</a>&gt;</code>
+                           </span><span class='stab '></span><div class='docblock'><p>The full screen windows,contains all full_screen windows, but only the last one is visible. when you close all full screen windows.
+you will go back to the previous look, when you set the first full screen window.
+1st is current full screen window
+2nd is it proviously geometry
+3rd is its type
+last one is the provious focused window , before that one is set to be full screen.</p>
+</div><span id='structfield.focused_window' class='structfield'><code>focused_window: <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='type' href='../../cplwm_api/types/type.Window.html' title='cplwm_api::types::Window'>Window</a>&gt;</code>
+                           </span><span class='stab '></span><div class='docblock'><p>The vectors of the focus window, when it is empty then there is no focused window, which only can contain 1 object at maximum.</p>
+</div><span id='structfield.float_windows' class='structfield'><code>float_windows: <a class='struct' href='https://doc.rust-lang.org/nightly/collections/vec/struct.Vec.html' title='collections::vec::Vec'>Vec</a>&lt;<a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.tuple.html'>(</a><a class='type' href='../../cplwm_api/types/type.Window.html' title='cplwm_api::types::Window'>Window</a>, <a class='struct' href='../../cplwm_api/types/struct.Geometry.html' title='cplwm_api::types::Geometry'>Geometry</a><a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.tuple.html'>)</a>&gt;</code>
+                           </span><span class='stab '></span><div class='docblock'><p>all float windows that are under controlled</p>
+</div><span id='structfield.tile_windows' class='structfield'><code>tile_windows: <a class='struct' href='https://doc.rust-lang.org/nightly/collections/vec/struct.Vec.html' title='collections::vec::Vec'>Vec</a>&lt;<a class='type' href='../../cplwm_api/types/type.Window.html' title='cplwm_api::types::Window'>Window</a>&gt;</code>
+                           </span><span class='stab '></span><div class='docblock'><p>all tiling windows that are under controlled</p>
+</div><span id='structfield.screen' class='structfield'><code>screen: <a class='struct' href='../../cplwm_api/types/struct.Screen.html' title='cplwm_api::types::Screen'>Screen</a></code>
+                           </span><span class='stab '></span><div class='docblock'><p>we need to know the current size of the screen.</p>
+</div><span id='structfield.original_windows' class='structfield'><code>original_windows: <a class='struct' href='https://doc.rust-lang.org/nightly/collections/vec/struct.Vec.html' title='collections::vec::Vec'>Vec</a>&lt;<a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.tuple.html'>(</a><a class='type' href='../../cplwm_api/types/type.Window.html' title='cplwm_api::types::Window'>Window</a>, <a class='struct' href='../../cplwm_api/types/struct.Geometry.html' title='cplwm_api::types::Geometry'>Geometry</a><a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.tuple.html'>)</a>&gt;</code>
+                           </span><span class='stab '></span><div class='docblock'><p>original windows with the geometry</p>
+</div><span id='structfield.minimised_windows' class='structfield'><code>minimised_windows: <a class='struct' href='https://doc.rust-lang.org/nightly/collections/vec/struct.Vec.html' title='collections::vec::Vec'>Vec</a>&lt;<a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.tuple.html'>(</a><a class='type' href='../../cplwm_api/types/type.Window.html' title='cplwm_api::types::Window'>Window</a>, <a class='struct' href='../../cplwm_api/types/struct.Geometry.html' title='cplwm_api::types::Geometry'>Geometry</a>, <a class='enum' href='../../cplwm_api/types/enum.FloatOrTile.html' title='cplwm_api::types::FloatOrTile'>FloatOrTile</a><a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.tuple.html'>)</a>&gt;</code>
+                           </span><span class='stab '></span><div class='docblock'><p>minimised windows with the geometry</p>
+</div><span id='structfield.gap' class='structfield'><code>gap: <a class='type' href='../../cplwm_api/types/type.GapSize.html' title='cplwm_api::types::GapSize'>GapSize</a></code>
+                           </span><span class='stab '></span><div class='docblock'><p>gap</p>
+</div><span id='structfield.workspace' class='structfield'><code>workspace: <a class='type' href='../../cplwm_api/types/type.WorkspaceIndex.html' title='cplwm_api::types::WorkspaceIndex'>WorkspaceIndex</a></code>
+                           </span><span class='stab '></span><div class='docblock'><p>for which workspaces</p>
+</div><h2 id='implementations'>Trait Implementations</h2><h3 class='impl'><span class='in-band'><code>impl <a class='trait' href='https://doc.rust-lang.org/nightly/core/clone/trait.Clone.html' title='core::clone::Clone'>Clone</a> for <a class='struct' href='../../cplwm_assignment/g_multiple_workspaces/struct.FloatscreenWM.html' title='cplwm_assignment::g_multiple_workspaces::FloatscreenWM'>FloatscreenWM</a></code></span><span class='out-of-band'><div class='ghost'></div><a id='src-2051' class='srclink' href='../../src/cplwm_assignment/src/g_multiple_workspaces.rs.html#55' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.clone' class='method'><code>fn <a href='https://doc.rust-lang.org/nightly/core/clone/trait.Clone.html#tymethod.clone' class='fnname'>clone</a>(&amp;self) -&gt; <a class='struct' href='../../cplwm_assignment/g_multiple_workspaces/struct.FloatscreenWM.html' title='cplwm_assignment::g_multiple_workspaces::FloatscreenWM'>FloatscreenWM</a></code></h4>
+<div class='docblock'><p>Returns a copy of the value. <a href="https://doc.rust-lang.org/nightly/core/clone/trait.Clone.html#tymethod.clone">Read more</a></p>
+</div><h4 id='method.clone_from' class='method'><code>fn <a href='https://doc.rust-lang.org/nightly/core/clone/trait.Clone.html#method.clone_from' class='fnname'>clone_from</a>(&amp;mut self, source: &amp;Self)</code><div class='since' title='Stable since Rust version 1.0.0'>1.0.0</div></h4>
+<div class='docblock'><p>Performs copy-assignment from <code>source</code>. <a href="https://doc.rust-lang.org/nightly/core/clone/trait.Clone.html#method.clone_from">Read more</a></p>
+</div></div><h3 class='impl'><span class='in-band'><code>impl <a class='trait' href='https://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html' title='core::fmt::Debug'>Debug</a> for <a class='struct' href='../../cplwm_assignment/g_multiple_workspaces/struct.FloatscreenWM.html' title='cplwm_assignment::g_multiple_workspaces::FloatscreenWM'>FloatscreenWM</a></code></span><span class='out-of-band'><div class='ghost'></div><a id='src-2064' class='srclink' href='../../src/cplwm_assignment/src/g_multiple_workspaces.rs.html#55' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.fmt' class='method'><code>fn <a href='https://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html#tymethod.fmt' class='fnname'>fmt</a>(&amp;self, __arg_0: &amp;mut <a class='struct' href='https://doc.rust-lang.org/nightly/core/fmt/struct.Formatter.html' title='core::fmt::Formatter'>Formatter</a>) -&gt; <a class='type' href='https://doc.rust-lang.org/nightly/core/fmt/type.Result.html' title='core::fmt::Result'>Result</a></code></h4>
+<div class='docblock'><p>Formats the value using the given formatter.</p>
+</div></div><h3 class='impl'><span class='in-band'><code>impl <a class='trait' href='../../rustc_serialize/serialize/trait.Encodable.html' title='rustc_serialize::serialize::Encodable'>Encodable</a> for <a class='struct' href='../../cplwm_assignment/g_multiple_workspaces/struct.FloatscreenWM.html' title='cplwm_assignment::g_multiple_workspaces::FloatscreenWM'>FloatscreenWM</a></code></span><span class='out-of-band'><div class='ghost'></div><a id='src-2079' class='srclink' href='../../src/cplwm_assignment/src/g_multiple_workspaces.rs.html#55' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.encode' class='method'><code>fn <a href='../../rustc_serialize/serialize/trait.Encodable.html#tymethod.encode' class='fnname'>encode</a>&lt;__S:&nbsp;<a class='trait' href='../../rustc_serialize/serialize/trait.Encoder.html' title='rustc_serialize::serialize::Encoder'>Encoder</a>&gt;(&amp;self, __arg_0: &amp;mut __S) -&gt; <a class='enum' href='https://doc.rust-lang.org/nightly/core/result/enum.Result.html' title='core::result::Result'>Result</a>&lt;<a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.tuple.html'>()</a>,&nbsp;__S::Error&gt;</code></h4>
+</div><h3 class='impl'><span class='in-band'><code>impl <a class='trait' href='../../rustc_serialize/serialize/trait.Decodable.html' title='rustc_serialize::serialize::Decodable'>Decodable</a> for <a class='struct' href='../../cplwm_assignment/g_multiple_workspaces/struct.FloatscreenWM.html' title='cplwm_assignment::g_multiple_workspaces::FloatscreenWM'>FloatscreenWM</a></code></span><span class='out-of-band'><div class='ghost'></div><a id='src-2134' class='srclink' href='../../src/cplwm_assignment/src/g_multiple_workspaces.rs.html#55' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.decode' class='method'><code>fn <a href='../../rustc_serialize/serialize/trait.Decodable.html#tymethod.decode' class='fnname'>decode</a>&lt;__D:&nbsp;<a class='trait' href='../../rustc_serialize/serialize/trait.Decoder.html' title='rustc_serialize::serialize::Decoder'>Decoder</a>&gt;(__arg_0: &amp;mut __D) -&gt; <a class='enum' href='https://doc.rust-lang.org/nightly/core/result/enum.Result.html' title='core::result::Result'>Result</a>&lt;<a class='struct' href='../../cplwm_assignment/g_multiple_workspaces/struct.FloatscreenWM.html' title='cplwm_assignment::g_multiple_workspaces::FloatscreenWM'>FloatscreenWM</a>,&nbsp;__D::Error&gt;</code></h4>
+</div><h3 class='impl'><span class='in-band'><code>impl <a class='trait' href='../../cplwm_api/wm/trait.WindowManager.html' title='cplwm_api::wm::WindowManager'>WindowManager</a> for <a class='struct' href='../../cplwm_assignment/g_multiple_workspaces/struct.FloatscreenWM.html' title='cplwm_assignment::g_multiple_workspaces::FloatscreenWM'>FloatscreenWM</a></code></span><span class='out-of-band'><div class='ghost'></div><a id='src-2211' class='srclink' href='../../src/cplwm_assignment/src/g_multiple_workspaces.rs.html#133-528' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='associatedtype.Error' class='type'><code>type <a href='../../cplwm_api/wm/trait.WindowManager.html#associatedtype.Error' class='type'>Error</a> = <a class='enum' href='../../cplwm_assignment/g_multiple_workspaces/enum.FloatscreenWMError.html' title='cplwm_assignment::g_multiple_workspaces::FloatscreenWMError'>FloatscreenWMError</a></code></h4>
+<div class='docblock'><p>use <code>FloatscreenWMError</code> as  <code>Error</code> type.</p>
+</div><h4 id='method.new' class='method'><code>fn <a href='../../cplwm_api/wm/trait.WindowManager.html#tymethod.new' class='fnname'>new</a>(screen: <a class='struct' href='../../cplwm_api/types/struct.Screen.html' title='cplwm_api::types::Screen'>Screen</a>) -&gt; <a class='struct' href='../../cplwm_assignment/g_multiple_workspaces/struct.FloatscreenWM.html' title='cplwm_assignment::g_multiple_workspaces::FloatscreenWM'>FloatscreenWM</a></code></h4>
+<div class='docblock'><p>initiate a new windows manager</p>
+</div><h4 id='method.get_windows' class='method'><code>fn <a href='../../cplwm_api/wm/trait.WindowManager.html#tymethod.get_windows' class='fnname'>get_windows</a>(&amp;self) -&gt; <a class='struct' href='https://doc.rust-lang.org/nightly/collections/vec/struct.Vec.html' title='collections::vec::Vec'>Vec</a>&lt;<a class='type' href='../../cplwm_api/types/type.Window.html' title='cplwm_api::types::Window'>Window</a>&gt;</code></h4>
+<div class='docblock'><p>get all windows which are managed by windows manager</p>
+</div><h4 id='method.get_focused_window' class='method'><code>fn <a href='../../cplwm_api/wm/trait.WindowManager.html#method.get_focused_window' class='fnname'>get_focused_window</a>(&amp;self) -&gt; <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='type' href='../../cplwm_api/types/type.Window.html' title='cplwm_api::types::Window'>Window</a>&gt;</code></h4>
+<div class='docblock'><p>get current focused window ,if no window is foucsed ,the function returns None</p>
+</div><h4 id='method.add_window' class='method'><code>fn <a href='../../cplwm_api/wm/trait.WindowManager.html#tymethod.add_window' class='fnname'>add_window</a>(&amp;mut self, window_with_info: <a class='struct' href='../../cplwm_api/types/struct.WindowWithInfo.html' title='cplwm_api::types::WindowWithInfo'>WindowWithInfo</a>) -&gt; <a class='enum' href='https://doc.rust-lang.org/nightly/core/result/enum.Result.html' title='core::result::Result'>Result</a>&lt;<a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.tuple.html'>()</a>,&nbsp;Self::Error&gt;</code></h4>
+<div class='docblock'><p>add a new window to the windows manager.</p>
+</div><h4 id='method.remove_window' class='method'><code>fn <a href='../../cplwm_api/wm/trait.WindowManager.html#tymethod.remove_window' class='fnname'>remove_window</a>(&amp;mut self, window: <a class='type' href='../../cplwm_api/types/type.Window.html' title='cplwm_api::types::Window'>Window</a>) -&gt; <a class='enum' href='https://doc.rust-lang.org/nightly/core/result/enum.Result.html' title='core::result::Result'>Result</a>&lt;<a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.tuple.html'>()</a>,&nbsp;Self::Error&gt;</code></h4>
+<div class='docblock'><p>remove the window from the window manager</p>
+</div><h4 id='method.get_window_layout' class='method'><code>fn <a href='../../cplwm_api/wm/trait.WindowManager.html#tymethod.get_window_layout' class='fnname'>get_window_layout</a>(&amp;self) -&gt; <a class='struct' href='../../cplwm_api/types/struct.WindowLayout.html' title='cplwm_api::types::WindowLayout'>WindowLayout</a></code></h4>
+<div class='docblock'><p>get the layout of windows which are managed</p>
+</div><h4 id='method.focus_window' class='method'><code>fn <a href='../../cplwm_api/wm/trait.WindowManager.html#tymethod.focus_window' class='fnname'>focus_window</a>(&amp;mut self, window: <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='type' href='../../cplwm_api/types/type.Window.html' title='cplwm_api::types::Window'>Window</a>&gt;) -&gt; <a class='enum' href='https://doc.rust-lang.org/nightly/core/result/enum.Result.html' title='core::result::Result'>Result</a>&lt;<a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.tuple.html'>()</a>,&nbsp;Self::Error&gt;</code></h4>
+<div class='docblock'><p>set a new focus window</p>
+</div><h4 id='method.cycle_focus' class='method'><code>fn <a href='../../cplwm_api/wm/trait.WindowManager.html#tymethod.cycle_focus' class='fnname'>cycle_focus</a>(&amp;mut self, dir: <a class='enum' href='../../cplwm_api/types/enum.PrevOrNext.html' title='cplwm_api::types::PrevOrNext'>PrevOrNext</a>)</code></h4>
+<div class='docblock'><p>cycle focus the window ,when this is no window focused right now ,focus a random one</p>
+</div><h4 id='method.get_window_info' class='method'><code>fn <a href='../../cplwm_api/wm/trait.WindowManager.html#tymethod.get_window_info' class='fnname'>get_window_info</a>(&amp;self, window: <a class='type' href='../../cplwm_api/types/type.Window.html' title='cplwm_api::types::Window'>Window</a>) -&gt; <a class='enum' href='https://doc.rust-lang.org/nightly/core/result/enum.Result.html' title='core::result::Result'>Result</a>&lt;<a class='struct' href='../../cplwm_api/types/struct.WindowWithInfo.html' title='cplwm_api::types::WindowWithInfo'>WindowWithInfo</a>,&nbsp;Self::Error&gt;</code></h4>
+<div class='docblock'><p>get the information of the window that is provided .</p>
+</div><h4 id='method.get_screen' class='method'><code>fn <a href='../../cplwm_api/wm/trait.WindowManager.html#tymethod.get_screen' class='fnname'>get_screen</a>(&amp;self) -&gt; <a class='struct' href='../../cplwm_api/types/struct.Screen.html' title='cplwm_api::types::Screen'>Screen</a></code></h4>
+<div class='docblock'><p>get the sreen of current windows manager</p>
+</div><h4 id='method.resize_screen' class='method'><code>fn <a href='../../cplwm_api/wm/trait.WindowManager.html#tymethod.resize_screen' class='fnname'>resize_screen</a>(&amp;mut self, screen: <a class='struct' href='../../cplwm_api/types/struct.Screen.html' title='cplwm_api::types::Screen'>Screen</a>)</code></h4>
+<div class='docblock'><p>resize the window with provide screen size</p>
+</div><h4 id='method.is_managed' class='method'><code>fn <a href='../../cplwm_api/wm/trait.WindowManager.html#method.is_managed' class='fnname'>is_managed</a>(&amp;self, window: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.u64.html'>u64</a>) -&gt; <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a></code></h4>
+<div class='docblock'><p>Check whether a window is managed by this window manager. <a href="../../cplwm_api/wm/trait.WindowManager.html#method.is_managed">Read more</a></p>
+</div></div><h3 class='impl'><span class='in-band'><code>impl <a class='trait' href='../../cplwm_api/wm/trait.TilingSupport.html' title='cplwm_api::wm::TilingSupport'>TilingSupport</a> for <a class='struct' href='../../cplwm_assignment/g_multiple_workspaces/struct.FloatscreenWM.html' title='cplwm_assignment::g_multiple_workspaces::FloatscreenWM'>FloatscreenWM</a></code></span><span class='out-of-band'><div class='ghost'></div><a id='src-2328' class='srclink' href='../../src/cplwm_assignment/src/g_multiple_workspaces.rs.html#531-672' title='goto source code'>[src]</a></span></h3>
+<div class='docblock'><p>Implementation of TilingSupport</p>
+</div><div class='impl-items'><h4 id='method.get_master_window' class='method'><code>fn <a href='../../cplwm_api/wm/trait.TilingSupport.html#tymethod.get_master_window' class='fnname'>get_master_window</a>(&amp;self) -&gt; <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='type' href='../../cplwm_api/types/type.Window.html' title='cplwm_api::types::Window'>Window</a>&gt;</code></h4>
+<div class='docblock'><p>get the master window of current windows manager
+The first one in the vector is the master window</p>
+</div><h4 id='method.swap_with_master' class='method'><code>fn <a href='../../cplwm_api/wm/trait.TilingSupport.html#tymethod.swap_with_master' class='fnname'>swap_with_master</a>(&amp;mut self, window: <a class='type' href='../../cplwm_api/types/type.Window.html' title='cplwm_api::types::Window'>Window</a>) -&gt; <a class='enum' href='https://doc.rust-lang.org/nightly/core/result/enum.Result.html' title='core::result::Result'>Result</a>&lt;<a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.tuple.html'>()</a>,&nbsp;Self::Error&gt;</code></h4>
+<div class='docblock'><p>swap the provided window with current master tile window
+The implement is under the condition, the swap only happen inside tile windows.</p>
+</div><h4 id='method.swap_windows' class='method'><code>fn <a href='../../cplwm_api/wm/trait.TilingSupport.html#tymethod.swap_windows' class='fnname'>swap_windows</a>(&amp;mut self, dir: <a class='enum' href='../../cplwm_api/types/enum.PrevOrNext.html' title='cplwm_api::types::PrevOrNext'>PrevOrNext</a>)</code></h4>
+<div class='docblock'><p>Swap the focused window with the one in the next or previous tile.
+if current focused is a tile window
+The following will happen</p>
+</div></div><h3 class='impl'><span class='in-band'><code>impl <a class='trait' href='../../cplwm_api/wm/trait.FloatSupport.html' title='cplwm_api::wm::FloatSupport'>FloatSupport</a> for <a class='struct' href='../../cplwm_assignment/g_multiple_workspaces/struct.FloatscreenWM.html' title='cplwm_assignment::g_multiple_workspaces::FloatscreenWM'>FloatscreenWM</a></code></span><span class='out-of-band'><div class='ghost'></div><a id='src-2375' class='srclink' href='../../src/cplwm_assignment/src/g_multiple_workspaces.rs.html#676-754' title='goto source code'>[src]</a></span></h3>
+<div class='docblock'><p>Implementation of TilingSupport</p>
+</div><div class='impl-items'><h4 id='method.get_floating_windows' class='method'><code>fn <a href='../../cplwm_api/wm/trait.FloatSupport.html#tymethod.get_floating_windows' class='fnname'>get_floating_windows</a>(&amp;self) -&gt; <a class='struct' href='https://doc.rust-lang.org/nightly/collections/vec/struct.Vec.html' title='collections::vec::Vec'>Vec</a>&lt;<a class='type' href='../../cplwm_api/types/type.Window.html' title='cplwm_api::types::Window'>Window</a>&gt;</code></h4>
+<div class='docblock'><p>get the windows are managed which is tiling window</p>
+</div><h4 id='method.is_floating' class='method'><code>fn <a href='../../cplwm_api/wm/trait.FloatSupport.html#method.is_floating' class='fnname'>is_floating</a>(&amp;self, window: <a class='type' href='../../cplwm_api/types/type.Window.html' title='cplwm_api::types::Window'>Window</a>) -&gt; <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a></code></h4>
+<div class='docblock'><p>check the window is float or not</p>
+</div><h4 id='method.toggle_floating' class='method'><code>fn <a href='../../cplwm_api/wm/trait.FloatSupport.html#tymethod.toggle_floating' class='fnname'>toggle_floating</a>(&amp;mut self, window: <a class='type' href='../../cplwm_api/types/type.Window.html' title='cplwm_api::types::Window'>Window</a>) -&gt; <a class='enum' href='https://doc.rust-lang.org/nightly/core/result/enum.Result.html' title='core::result::Result'>Result</a>&lt;<a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.tuple.html'>()</a>,&nbsp;Self::Error&gt;</code></h4>
+<div class='docblock'><p>toggle the window, the given window is floating, let it <em>sink</em>, if it is not floating,</p>
+</div><h4 id='method.set_window_geometry' class='method'><code>fn <a href='../../cplwm_api/wm/trait.FloatSupport.html#tymethod.set_window_geometry' class='fnname'>set_window_geometry</a>(&amp;mut self, window: <a class='type' href='../../cplwm_api/types/type.Window.html' title='cplwm_api::types::Window'>Window</a>, new_geometry: <a class='struct' href='../../cplwm_api/types/struct.Geometry.html' title='cplwm_api::types::Geometry'>Geometry</a>) -&gt; <a class='enum' href='https://doc.rust-lang.org/nightly/core/result/enum.Result.html' title='core::result::Result'>Result</a>&lt;<a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.tuple.html'>()</a>,&nbsp;Self::Error&gt;</code></h4>
+<div class='docblock'><p>Resize/move the given floating window according to the given geometry.</p>
+</div></div><h3 class='impl'><span class='in-band'><code>impl <a class='trait' href='../../cplwm_api/wm/trait.MinimiseSupport.html' title='cplwm_api::wm::MinimiseSupport'>MinimiseSupport</a> for <a class='struct' href='../../cplwm_assignment/g_multiple_workspaces/struct.FloatscreenWM.html' title='cplwm_assignment::g_multiple_workspaces::FloatscreenWM'>FloatscreenWM</a></code></span><span class='out-of-band'><div class='ghost'></div><a id='src-2417' class='srclink' href='../../src/cplwm_assignment/src/g_multiple_workspaces.rs.html#757-851' title='goto source code'>[src]</a></span></h3>
+<div class='docblock'><p>Implementation of MinimiseSupport</p>
+</div><div class='impl-items'><h4 id='method.get_minimised_windows' class='method'><code>fn <a href='../../cplwm_api/wm/trait.MinimiseSupport.html#tymethod.get_minimised_windows' class='fnname'>get_minimised_windows</a>(&amp;self) -&gt; <a class='struct' href='https://doc.rust-lang.org/nightly/collections/vec/struct.Vec.html' title='collections::vec::Vec'>Vec</a>&lt;<a class='type' href='../../cplwm_api/types/type.Window.html' title='cplwm_api::types::Window'>Window</a>&gt;</code></h4>
+<div class='docblock'><p>Return a vector of all the minimised windows.</p>
+</div><h4 id='method.is_minimised' class='method'><code>fn <a href='../../cplwm_api/wm/trait.MinimiseSupport.html#method.is_minimised' class='fnname'>is_minimised</a>(&amp;self, window: <a class='type' href='../../cplwm_api/types/type.Window.html' title='cplwm_api::types::Window'>Window</a>) -&gt; <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a></code></h4>
+<div class='docblock'><p>Return <code>true</code> if the given window is minimised.</p>
+</div><h4 id='method.toggle_minimised' class='method'><code>fn <a href='../../cplwm_api/wm/trait.MinimiseSupport.html#tymethod.toggle_minimised' class='fnname'>toggle_minimised</a>(&amp;mut self, window: <a class='type' href='../../cplwm_api/types/type.Window.html' title='cplwm_api::types::Window'>Window</a>) -&gt; <a class='enum' href='https://doc.rust-lang.org/nightly/core/result/enum.Result.html' title='core::result::Result'>Result</a>&lt;<a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.tuple.html'>()</a>,&nbsp;Self::Error&gt;</code></h4>
+<div class='docblock'><p>Minimise the given window, or when it is already minimised, unminise
+it.</p>
+</div></div><h3 class='impl'><span class='in-band'><code>impl <a class='trait' href='../../cplwm_api/wm/trait.FullscreenSupport.html' title='cplwm_api::wm::FullscreenSupport'>FullscreenSupport</a> for <a class='struct' href='../../cplwm_assignment/g_multiple_workspaces/struct.FloatscreenWM.html' title='cplwm_assignment::g_multiple_workspaces::FloatscreenWM'>FloatscreenWM</a></code></span><span class='out-of-band'><div class='ghost'></div><a id='src-2459' class='srclink' href='../../src/cplwm_assignment/src/g_multiple_workspaces.rs.html#854-940' title='goto source code'>[src]</a></span></h3>
+<div class='docblock'><p>Implementation of FullscreenSupport</p>
+</div><div class='impl-items'><h4 id='method.get_fullscreen_window' class='method'><code>fn <a href='../../cplwm_api/wm/trait.FullscreenSupport.html#tymethod.get_fullscreen_window' class='fnname'>get_fullscreen_window</a>(&amp;self) -&gt; <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='type' href='../../cplwm_api/types/type.Window.html' title='cplwm_api::types::Window'>Window</a>&gt;</code></h4>
+<div class='docblock'><p>Return the current fullscreen, if any.</p>
+</div><h4 id='method.toggle_fullscreen' class='method'><code>fn <a href='../../cplwm_api/wm/trait.FullscreenSupport.html#tymethod.toggle_fullscreen' class='fnname'>toggle_fullscreen</a>(&amp;mut self, window: <a class='type' href='../../cplwm_api/types/type.Window.html' title='cplwm_api::types::Window'>Window</a>) -&gt; <a class='enum' href='https://doc.rust-lang.org/nightly/core/result/enum.Result.html' title='core::result::Result'>Result</a>&lt;<a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.tuple.html'>()</a>,&nbsp;Self::Error&gt;</code></h4>
+<div class='docblock'><p>Make the given window fullscreen, or when it is already fullscreen,
+undo it.</p>
+</div></div><h3 class='impl'><span class='in-band'><code>impl <a class='trait' href='../../cplwm_api/wm/trait.GapSupport.html' title='cplwm_api::wm::GapSupport'>GapSupport</a> for <a class='struct' href='../../cplwm_assignment/g_multiple_workspaces/struct.FloatscreenWM.html' title='cplwm_assignment::g_multiple_workspaces::FloatscreenWM'>FloatscreenWM</a></code></span><span class='out-of-band'><div class='ghost'></div><a id='src-2492' class='srclink' href='../../src/cplwm_assignment/src/g_multiple_workspaces.rs.html#942-952' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.get_gap' class='method'><code>fn <a href='../../cplwm_api/wm/trait.GapSupport.html#tymethod.get_gap' class='fnname'>get_gap</a>(&amp;self) -&gt; <a class='type' href='../../cplwm_api/types/type.GapSize.html' title='cplwm_api::types::GapSize'>GapSize</a></code></h4>
+<div class='docblock'><p>Return the current gap size.</p>
+</div><h4 id='method.set_gap' class='method'><code>fn <a href='../../cplwm_api/wm/trait.GapSupport.html#tymethod.set_gap' class='fnname'>set_gap</a>(&amp;mut self, g: <a class='type' href='../../cplwm_api/types/type.GapSize.html' title='cplwm_api::types::GapSize'>GapSize</a>)</code></h4>
+<div class='docblock'><p>Set the gap size.</p>
+</div></div><h3 class='impl'><span class='in-band'><code>impl&lt;WM:&nbsp;<a class='trait' href='../../cplwm_api/wm/trait.WindowManager.html' title='cplwm_api::wm::WindowManager'>WindowManager</a>&gt; <a class='trait' href='../../cplwm_api/wm/trait.MultiWorkspaceSupport.html' title='cplwm_api::wm::MultiWorkspaceSupport'>MultiWorkspaceSupport</a>&lt;WM&gt; for <a class='struct' href='../../cplwm_assignment/g_multiple_workspaces/struct.FloatscreenWM.html' title='cplwm_assignment::g_multiple_workspaces::FloatscreenWM'>FloatscreenWM</a></code></span><span class='out-of-band'><div class='ghost'></div><a id='src-2498' class='srclink' href='../../src/cplwm_assignment/src/g_multiple_workspaces.rs.html#955-994' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.get_current_workspace_index' class='method'><code>fn <a href='../../cplwm_api/wm/trait.MultiWorkspaceSupport.html#tymethod.get_current_workspace_index' class='fnname'>get_current_workspace_index</a>(&amp;self) -&gt; <a class='type' href='../../cplwm_api/types/type.WorkspaceIndex.html' title='cplwm_api::types::WorkspaceIndex'>WorkspaceIndex</a></code></h4>
+<div class='docblock'><p>Return the current workspace index.</p>
+
+<p>When creating a new workspace this will return 0.</p>
+
+<p><strong>Invariant</strong>: <code>0 &lt;= get_current_workspace_index() &lt;= MAX_WORKSPACE_INDEX</code>.</p>
+</div><h4 id='method.get_workspace' class='method'><code>fn <a href='../../cplwm_api/wm/trait.MultiWorkspaceSupport.html#tymethod.get_workspace' class='fnname'>get_workspace</a>(&amp;self, index: <a class='type' href='../../cplwm_api/types/type.WorkspaceIndex.html' title='cplwm_api::types::WorkspaceIndex'>WorkspaceIndex</a>) -&gt; <a class='enum' href='https://doc.rust-lang.org/nightly/core/result/enum.Result.html' title='core::result::Result'>Result</a>&lt;&amp;WM,&nbsp;Self::Error&gt;</code></h4>
+<div class='docblock'><p>Get an immutable borrow of the workspace at the given index.</p>
+
+<p>This function <em>should</em> return an appropriate error when <code>0 &lt;= index &lt;= MAX_WORKSPACE_INDEX</code> is not true.</p>
+</div><h4 id='method.get_workspace_mut' class='method'><code>fn <a href='../../cplwm_api/wm/trait.MultiWorkspaceSupport.html#tymethod.get_workspace_mut' class='fnname'>get_workspace_mut</a>(&amp;mut self, index: <a class='type' href='../../cplwm_api/types/type.WorkspaceIndex.html' title='cplwm_api::types::WorkspaceIndex'>WorkspaceIndex</a>) -&gt; <a class='enum' href='https://doc.rust-lang.org/nightly/core/result/enum.Result.html' title='core::result::Result'>Result</a>&lt;&amp;mut WM,&nbsp;Self::Error&gt;</code></h4>
+<div class='docblock'><p>Get a mutable borrow of the workspace at the given index.</p>
+
+<p>This function <em>should</em> return an appropriate error when <code>0 &lt;= index &lt;= MAX_WORKSPACE_INDEX</code> is not true.</p>
+</div><h4 id='method.switch_workspace' class='method'><code>fn <a href='../../cplwm_api/wm/trait.MultiWorkspaceSupport.html#tymethod.switch_workspace' class='fnname'>switch_workspace</a>(&amp;mut self, index: <a class='type' href='../../cplwm_api/types/type.WorkspaceIndex.html' title='cplwm_api::types::WorkspaceIndex'>WorkspaceIndex</a>) -&gt; <a class='enum' href='https://doc.rust-lang.org/nightly/core/result/enum.Result.html' title='core::result::Result'>Result</a>&lt;<a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.tuple.html'>()</a>,&nbsp;Self::Error&gt;</code></h4>
+<div class='docblock'><p>Switch to the workspace at the given index.</p>
+
+<p>If <code>index == get_current_workspace_index()</code>, do nothing.</p>
+
+<p><strong>Invariant</strong>: the window layout after switching to another workspace
+and then switching back to the original workspace should be the same
+as before.</p>
+
+<p>This function <em>should</em> return an appropriate error when <code>0 &lt;= index &lt;= MAX_WORKSPACE_INDEX</code> is not true.</p>
+</div></div></section>
+    <section id='search' class="content hidden"></section>
+
+    <section class="footer"></section>
+
+    <aside id="help" class="hidden">
+        <div>
+            <h1 class="hidden">Help</h1>
+
+            <div class="shortcuts">
+                <h2>Keyboard Shortcuts</h2>
+
+                <dl>
+                    <dt>?</dt>
+                    <dd>Show this help dialog</dd>
+                    <dt>S</dt>
+                    <dd>Focus the search field</dd>
+                    <dt>&larrb;</dt>
+                    <dd>Move up in search results</dd>
+                    <dt>&rarrb;</dt>
+                    <dd>Move down in search results</dd>
+                    <dt>&#9166;</dt>
+                    <dd>Go to active search result</dd>
+                    <dt>+</dt>
+                    <dd>Collapse/expand all sections</dd>
+                </dl>
+            </div>
+
+            <div class="infos">
+                <h2>Search Tricks</h2>
+
+                <p>
+                    Prefix searches with a type followed by a colon (e.g.
+                    <code>fn:</code>) to restrict the search to a given type.
+                </p>
+
+                <p>
+                    Accepted types are: <code>fn</code>, <code>mod</code>,
+                    <code>struct</code>, <code>enum</code>,
+                    <code>trait</code>, <code>type</code>, <code>macro</code>,
+                    and <code>const</code>.
+                </p>
+
+                <p>
+                    Search functions by type signature (e.g.
+                    <code>vec -> usize</code> or <code>* -> vec</code>)
+                </p>
+            </div>
+        </div>
+    </aside>
+
+    
+
+    <script>
+        window.rootPath = "../../";
+        window.currentCrate = "cplwm_assignment";
+        window.playgroundUrl = "";
+    </script>
+    <script src="../../jquery.js"></script>
+    <script src="../../main.js"></script>
+    
+    <script defer src="../../search-index.js"></script>
+</body>
+</html>

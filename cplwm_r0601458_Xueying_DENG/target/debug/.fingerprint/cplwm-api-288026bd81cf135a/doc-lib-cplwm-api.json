@@ -1,0 +1,1 @@
+{"rustc":18421504425114520007,"target":17195992927503056286,"profile":16291553864756094723,"local":{"variant":"Precalculated","fields":["1479080491.968899926s (/home/deng/Desktop/cplwm_r0601458_Xueying_DENG/api/src/types.rs)"]},"features":"None","deps":[["rustc-serialize v0.3.19",14517664882952817983],["rustc-serialize v0.3.19",13740848542598705065]],"rustflags":[]}

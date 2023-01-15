@@ -1,0 +1,1 @@
+initSidebarItems({"enum":[["TilescreenWMError","The error for tile screen"]],"struct":[["TilescreenWM","Stuct of Tile screen windows manager"]],"type":[["WMName","FloatscreenWM"]]});
