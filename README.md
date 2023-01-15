@@ -1,4 +1,4 @@
-# Rust_CPL - Comparative Programming language - Using language Rust - KUL
+# Rust_CPL - Comparative Programming language - KUL - Project
 The project for the course - Comparative Programming language - Using language Rust
 
 
